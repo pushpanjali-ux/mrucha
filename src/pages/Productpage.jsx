@@ -121,6 +121,7 @@ const navigate = useNavigate()
                 key={previous.image}
                 src={previous.image}
                 alt=""
+                loading="lazy"
                 className="absolute left-0 top-1/2 w-24 h-16 object-cover rounded-tl-xl shadow-md transform -translate-y-1/2 contrast-75"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: -120 }}
@@ -137,6 +138,7 @@ const navigate = useNavigate()
               src={current.image}
               alt=""
               drag="x"
+              loading="lazy"
               dragConstraints={{ left: 0, right: 0 }}
               onDragEnd={handleDragEnd}
               initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
@@ -150,7 +152,7 @@ const navigate = useNavigate()
   onClick={() => navigate(`/product/${slugify(current.title)}`)}
   className="absolute bottom-25 z-20 bg-blush font-asul text-blackish px-4 py-2 rounded-2xl shadow hover:mrucha transition"
 >
-  View Product
+  Try Me, Babe
 </button>
 
 

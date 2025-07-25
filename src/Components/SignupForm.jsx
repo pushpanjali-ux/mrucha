@@ -29,8 +29,8 @@ export default function SignupForm() {
 
   return (
     <div
-      className="w-screen h-screen flex items-center justify-center relative bg-cover bg-center"
-      style={{ backgroundImage: `url(${signupBg})` }}
+      className="w-screen h-screen flex items-center justify-center relative bg-cover bg-center "
+      style={{ backgroundImage: `url(${signupBg})`, }}
     >
       {/* Back button */}
       <button

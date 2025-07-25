@@ -117,6 +117,7 @@ export default function StoryPage() {
     src={vid.src}
     muted={false}
     playsInline
+    preload="none"
     controls={false}
     onEnded={() => {
       const video = videoRefs.current[index]

@@ -1,88 +1,3 @@
-// import React, { useRef, useState } from "react"
-// import { Link } from "react-router-dom"
-// import MruchaLogo from "../assets/mrucha-logo.svg"
-// import SignupIcon from "../assets/signup-icon.svg"
-// import { Volume2, VolumeX } from "lucide-react"
-
-// export default function HomePage() {
-//   const videoRef = useRef(null)
-//   const [isMuted, setIsMuted] = useState(true)
-
-//   const toggleMute = () => {
-//     const video = videoRef.current
-//     if (video) {
-//       video.muted = !video.muted
-//       setIsMuted(video.muted)
-//     }
-//   }
-
-//   return (
-//     <div className="w-screen h-screen overflow-hidden bg-mrucha text-cream">
-//       <div className="flex h-full w-[200vw]">
-//         {/* LEFT PANEL - 35% */}
-//         <div className="w-[35vw] h-full bg-mrucha relative flex flex-col justify-between p-6">
-//           {/* Logo */}
-//           <Link to="/" className="block">
-//             <img src={MruchaLogo} alt="Mrucha Logo" className="w-48 h-auto py-4 px-2" />
-//           </Link>
-
-//           {/* Bold Looks / Soft Feels */}
-//           <div>
-//             <h1 className="font-asul font-bold text-xl md:text-2xl">BOLD LOOKS</h1>
-//             <h2 className="font-garamond italic font-extralight text-[72px] md:text-[84px] tracking-[-0.04em] leading-[1] -mt-6 ">
-//               Soft Feels
-//             </h2>
-//           </div>
-//         </div>
-
-//         {/* RIGHT PANEL - 65% */}
-//         <div className="w-[65vw] h-full bg-blackish relative">
-//           {/* Signup icon */}
-//           <Link to="/signup" className="absolute top-6 right-6 z-10">
-//             <img
-//               src={SignupIcon}
-//               alt="Sign up"
-//               className="w-16 h-16 opacity-80 hover:opacity-100 transition"
-//             />
-//           </Link>
-
-//           {/* Story Link (use Link if it's a route) */}
-//           <Link
-//             to="/story"
-//             className="absolute top-20 right-6 text-blush/50 font-garamond italic font-extralight text-[48px] tracking-[-0.08em] hover:text-blush transition"
-//           >
-//             story’s behind
-//           </Link>
-
-//           {/* Hero Video */}
-//           <video
-//             ref={videoRef}
-//             src="/videos/hero-video.mp4"
-//             autoPlay
-//             loop
-//             playsInline
-//             className="w-[100vw] h-[81vh] object-cover absolute bottom-0 right-0"
-//           />
-
-//           {/* Mute toggle */}
-//           <button
-//             onClick={toggleMute}
-//             className="absolute bottom-4 right-6 text-blush/70 hover:text-blush z-10"
-//           >
-//             {isMuted ? (
-//               <VolumeX className="w-8 h-8" />
-//             ) : (
-//               <Volume2 className="w-8 h-8" />
-//             )}
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-
-
 import React, { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import MruchaLogo from "../assets/mrucha-logo.svg"
@@ -186,6 +101,7 @@ const animatedTextRef = useRef(null)
               <img
                 src={SignupIcon}
                 alt="Sign up"
+                loading="lazy"
                 className="w-16 h-16 opacity-80 hover:opacity-100 transition"
               />
             </Link>
@@ -209,6 +125,7 @@ const animatedTextRef = useRef(null)
             loop
             playsInline
             muted={!isMuted}
+            preload="none"
             onClick={handleVideoClick}
 onMouseEnter={() => videoRef.current?.play()}
   onMouseLeave={() => videoRef.current?.pause()}
