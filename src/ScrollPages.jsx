@@ -6,7 +6,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import HomePage from "./pages/HomePage";
-import ProductPage from "./pages/ProductPage";
+import ProductPage from "./pages/Productpage";
 import CircularGallery from "./pages/UsersPage";
 // import CreatorsPage from "./pages/CreatorsPage"
 
