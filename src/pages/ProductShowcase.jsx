@@ -31,6 +31,7 @@ export default function ProductShowcase() {
               key={i}
               src={`/images/${product.slug}/${img}`}
               alt={`${product.title} ${i + 1}`}
+              loading="lazy"
               className="w-full rounded-tr-[6vw] rounded-bl-[6vw] shadow-md object-cover hover:scale-105 transition-transform duration-300 ease-in-out"
             />
           ))}
