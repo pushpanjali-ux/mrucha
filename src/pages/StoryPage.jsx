@@ -79,7 +79,7 @@ export default function StoryPage() {
         onMouseEnter={() => setTextExpanded(true)}
         onMouseLeave={() => setTextExpanded(false)}
       >
-        {textExpanded ? "MRUNAL PANCHAL" : "MRUNAL"}
+        {textExpanded ? "MRUNAL PANCHAL" : "MRUCHAL"}
       </div>
 
       {/* Left Side */}
